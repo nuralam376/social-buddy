@@ -11,12 +11,13 @@ const Comments = ({ comments }) => {
 		const url = `https://randomuser.me/api?results=${totalComments}`;
 		fetch(url)
 			.then((response) => response.json())
-			.then((data) => setImages(data.results));
+			.then((data) => setImages(data.results))
+			.catch((error) => alert(error));
 	}, [totalComments]);
 
 	return (
 		<div>
-			<h1 style={{ textAlign: "center" }}>Comments</h1>
+			<h1 style={{ textAlign: "center" }}>Comments: {comments.length}</h1>
 			{/* Displays the individual comment after getting the images */}
 			{images.length === comments.length &&
 				comments.map((comment, index) => (

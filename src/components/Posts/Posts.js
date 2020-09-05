@@ -26,7 +26,7 @@ const Posts = () => {
 
 	return (
 		<div>
-			<h1 style={{ textAlign: "center" }}>Posts</h1>
+			<h1 style={{ textAlign: "center" }}>Posts : {posts.length}</h1>
 
 			{/* Displays all the fetched posts */}
 			<div className={classes.root}>

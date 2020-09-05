@@ -8,28 +8,28 @@ const PostDetails = () => {
 	const [user, setUser] = useState({});
 	const [comments, setComments] = useState([]);
 
-	const { userId, title, body } = post;
+	const { id, userId, title, body } = post;
 	const { name } = user;
 
 	useEffect(() => {
 		// Fetches the post of the selected id
 		fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
 			.then((response) => response.json())
-			.then((data) => setPost(data))
-			.catch((error) => alert(error));
+			.then((data) => (data ? setPost(data) : alert("Post not found")))
+			.catch((error) => alert("Post not found"));
 
 		// Retrieves the user of the post
 		if (userId) {
 			fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
 				.then((response) => response.json())
 				.then((data) => setUser(data))
-				.catch((error) => alert(error));
+				.catch((error) => alert("User not found"));
 
 			// Retrieves the comments of the post
 			fetch(`http://jsonplaceholder.typicode.com/comments?postId=${postId}`)
 				.then((response) => response.json())
 				.then((data) => setComments(data))
-				.catch((error) => alert(error));
+				.catch((error) => alert("Comments not found"));
 		}
 	}, [postId, userId]);
 
@@ -41,14 +41,17 @@ const PostDetails = () => {
 					margin: "10px auto 50px",
 					backgroundColor: "#8BC34A",
 					color: "white",
-					padding: "20px",
+					padding: "40px",
 					borderRadius: "20px",
-					width: "60%",
+					width: "85%",
 					boxShadow: "5px 5px 10px lightgray",
 				}}
 			>
+				<h1>{id || 0}</h1>
 				<h2>{title}</h2>
-				<p>Posted By - {name}</p>
+				<p>
+					<small>{name}</small>
+				</p>
 				<p>{body}</p>
 			</div>
 
