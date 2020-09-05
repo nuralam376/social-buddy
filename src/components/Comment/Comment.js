@@ -12,11 +12,7 @@ const useStyles = makeStyles({
 		margin: "20px auto",
 		padding: "20px",
 		borderRadius: "20px",
-		width: "50%",
-		["@media (max-width:780px)"]: {
-			// eslint-disable-line no-useless-computed-key
-			width: "85%",
-		},
+		width: "85%",
 		boxShadow: "5px 5px 10px lightgray",
 	},
 	userCommentSection: {

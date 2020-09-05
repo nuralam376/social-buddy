@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Posts from "./components/Posts/Posts";
 import PostDetails from "./components/PostDetails/PostDetails";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NotFound404 from "./components/404/NotFound404";
 
 function App() {
 	return (
@@ -19,6 +20,9 @@ function App() {
 					</Route>
 					<Route exact path="/posts/:postId">
 						<PostDetails />
+					</Route>
+					<Route path="*">
+						<NotFound404 />
 					</Route>
 				</Switch>
 			</Router>
