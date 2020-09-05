@@ -26,7 +26,7 @@ const PostDetails = () => {
 				.catch((error) => alert("User not found"));
 
 			// Retrieves the comments of the post
-			fetch(`http://jsonplaceholder.typicode.com/comments?postId=${postId}`)
+			fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
 				.then((response) => response.json())
 				.then((data) => setComments(data))
 				.catch((error) => alert("Comments not found"));
