@@ -42,11 +42,8 @@ const PostDetails = () => {
 			<br />
 			<br />
 
-			<h4>Comments</h4>
-
-			{comments.map((comment) => (
-				<Comments key={comment.id} comment={comment} />
-			))}
+			{/* Display all comments  */}
+			<Comments comments={comments} />
 		</div>
 	);
 };
