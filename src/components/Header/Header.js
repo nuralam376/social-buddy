@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -8,6 +9,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 	title: {
 		flexGrow: 1,
+	},
+	anchor: {
+		textDecoration: "none",
+		color: "white",
+		margin: "0px 20px",
+		fontSize: "17px",
 	},
 }));
 
@@ -21,8 +28,12 @@ const Header = () => {
 					<Typography variant="h6" className={classes.title}>
 						Social Buddy
 					</Typography>
-					<Button color="inherit">Home</Button>
-					<Button color="inherit">Posts</Button>
+					<Link to="/" className={classes.anchor}>
+						Home
+					</Link>
+					<Link to="/posts" className={classes.anchor}>
+						Posts
+					</Link>
 				</Toolbar>
 			</AppBar>
 		</div>

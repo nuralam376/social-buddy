@@ -7,6 +7,7 @@ import {
 	makeStyles,
 	Button,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
 	card: {
@@ -22,6 +23,10 @@ const useStyles = makeStyles({
 		fontSize: 25,
 		marginBottom: "20px",
 		color: "lightcoral",
+	},
+	button: {
+		margin: "auto",
+		textDecoration: "none",
 	},
 });
 
@@ -45,13 +50,11 @@ const Post = ({ post }) => {
 				</Typography>
 			</CardContent>
 			<CardActions>
-				<Button
-					size="small"
-					color="primary"
-					style={{ textAlign: "center", margin: "auto" }}
-				>
-					Learn More
-				</Button>
+				<Link to={`/posts/${id}`} className={classes.button}>
+					<Button size="small" color="primary">
+						Read More
+					</Button>
+				</Link>
 			</CardActions>
 		</Card>
 	);
