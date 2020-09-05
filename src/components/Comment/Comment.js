@@ -4,8 +4,6 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles({
 	userImage: {
 		borderRadius: "50%",
-		width: "120px",
-		height: "120px",
 		marginRight: "20px",
 	},
 	comment: {

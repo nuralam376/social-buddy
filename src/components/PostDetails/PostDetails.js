@@ -38,10 +38,13 @@ const PostDetails = () => {
 			<div
 				style={{
 					textAlign: "center",
-					margin: "0px auto 50px",
+					margin: "10px auto 50px",
 					backgroundColor: "#8BC34A",
 					color: "white",
 					padding: "20px",
+					borderRadius: "20px",
+					width: "60%",
+					boxShadow: "5px 5px 10px lightgray",
 				}}
 			>
 				<h2>{title}</h2>
