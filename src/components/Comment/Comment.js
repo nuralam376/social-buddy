@@ -17,6 +17,9 @@ const useStyles = makeStyles({
 		width: "50%",
 		boxShadow: "5px 5px 10px lightgray",
 	},
+	userCommentSection: {
+		textAlign: "left",
+	},
 });
 
 const Comment = ({ comment, image }) => {

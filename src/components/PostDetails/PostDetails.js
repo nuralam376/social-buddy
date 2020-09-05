@@ -34,17 +34,24 @@ const PostDetails = () => {
 	}, [postId, userId]);
 
 	return (
-		<div>
-			<h2>{title}</h2>
-			<p>Posted By - {name}</p>
-			<p>{body}</p>
-
-			<br />
-			<br />
+		<>
+			<div
+				style={{
+					textAlign: "center",
+					margin: "0px auto 50px",
+					backgroundColor: "#8BC34A",
+					color: "white",
+					padding: "20px",
+				}}
+			>
+				<h2>{title}</h2>
+				<p>Posted By - {name}</p>
+				<p>{body}</p>
+			</div>
 
 			{/* Display all comments  */}
 			<Comments comments={comments} />
-		</div>
+		</>
 	);
 };
 
