@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 		width: "50%",
 		["@media (max-width:780px)"]: {
 			// eslint-disable-line no-useless-computed-key
-			width: "80%",
+			width: "85%",
 		},
 		boxShadow: "5px 5px 10px lightgray",
 	},
