@@ -16,7 +16,8 @@ const Comments = ({ comments }) => {
 
 	return (
 		<div>
-			{/* Displays the individual comment */}
+			<h1 style={{ textAlign: "center" }}>Comments</h1>
+			{/* Displays the individual comment after getting the images */}
 			{images.length === comments.length &&
 				comments.map((comment, index) => (
 					<Comment
